@@ -33,3 +33,7 @@ Photos produits et prix : catalogue public BonDeal. Catégories initiales dédui
 
 ## Vérifications
 Compilation Next.js et TypeScript réussie. Contrôle navigateur : sous-menu, ajout d’un produit, modification du stock et des mises en avant, fiche publique du produit ajouté après rechargement, modification d’une commande et recherche du suivi public correspondant.
+
+## Conseiller shopping
+Le copilote public utilise désormais un moteur de recommandations calculé sur le catalogue : budget, catégorie, types de produit en français, remises actives, alternatives et exclusion des articles déjà au panier lorsqu’on demande de le compléter. Les suggestions possèdent des liens vers les fiches et un ajout direct au panier. Les conversations et critères sont conservés dans sessionStorage pendant l’onglet, séparément pour le public et la gestion. Ce moteur ne fait pas appel à un modèle IA ni à des prix externes ; « meilleur deal » désigne le classement parmi les produits correspondants du catalogue du prototype.
+Tests de recommandations : `node --test tests/deals.test.mjs` (Node 22.14+).
